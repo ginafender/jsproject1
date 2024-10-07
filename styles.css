@@ -1,3 +1,30 @@
 body {
     background-color: #00dbe2;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#playButton {
+    margin: auto;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#playButton:hover {
+    color: blueviolet;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: cadetblue;
+    align-items: center;
+    cursor: pointer;
+}
+
+
