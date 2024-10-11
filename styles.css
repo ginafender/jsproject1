@@ -27,4 +27,10 @@ body {
     cursor: pointer;
 }
 
+#title {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
 
