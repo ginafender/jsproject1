@@ -3,34 +3,57 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#playButton {
-    margin: auto;
+#playButton, #resetGame {
     font-size: large;
     text-align: center;
     text-decoration: none;
-    background-color: transparent;
+    background-color: #8e44ad;
     border: none;
     padding: 10px 20px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
-#playButton:hover {
+#playButton:hover, #resetGame:hover {
     color: blueviolet;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color: cadetblue;
+    background-color: #27ae60;
     align-items: center;
     cursor: pointer;
 }
 
 #title {
-    position: absolute;
-    top: 10%;
-    left: 40%;
+    position: relative;
+    top: 0%;
+    text-align: center;
+} 
+
+#imagesContainer {
+    /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    top: 5%;
+    justify-content: space-between;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
 }
+
+.imagesStyles {
+    display: inline-block;
+    width: calc(25%);
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 
 
