@@ -12,6 +12,7 @@ document.getElementById('playButton').addEventListener('click', function() {
     reset.style.display = 'block';
     startGame(); 
     generateImages();
+    // generateFlags();
 });
 
 reset.addEventListener('click', function(){
@@ -22,7 +23,12 @@ function startGame() {
     return
 }
 
-const imgCount = 16;
+const flags = ['images/argentina.png', 'images/argentina.png', 'images/brazil.png', 'images/brazil.png',
+            'images/chile.png', 'images/chile.png', 'images/colombia.png', 'images/colombia.png',
+            'images/drj.png', 'images/drj.png', 'images/indonesia.png', 'images/indonesia.png',
+            'images/sweden.png', 'images/sweden.png', 'images/switzerland.png', 'images/switzerland.png'];
+
+const imgCount = flags.length;
 const imgPath = 'images/green.png';
 function generateImages() {
     for (i = 0; i < imgCount; i++){
@@ -30,7 +36,21 @@ function generateImages() {
         greenElement.src = imgPath;
         greenElement.alt = `Image ${i + 1}`;
         greenElement.classList.add('imagesStyles');
-        images.appendChild(greenElement);
+        let flagElement = document.createElement('img');
+        flagElement.src = flags[i];
+        flagElement.alt = flags[i];
+        flagElement.classList.add('imagesStyles');
+        images.appendChild(greenElement, flagElement);
     }
 }
+
+// function generateFlags(){
+//     for (i = 0; i < imgCount; i++){
+//         let flagElement = document.createElement('img');
+//         flagElement.src = flags[i];
+//         flagElement.alt = flags[i];
+//         flagElement.classList.add('imagesStyles');
+//         images.appendChild(flagElement);
+//     }
+// }
 
